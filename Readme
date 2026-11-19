@@ -1,0 +1,105 @@
+# Lightning Legend: Daigo no Daibouken — Traducción al español
+
+Traducción no oficial al español de **ライトニングレジェンド ～大悟の大冒険～ (Lightning Legend: Daigo no Daibouken)** (PlayStation, SLPM-86015, Japón).
+Versión del parche: **v1.1** · Fecha: 2026-11-18
+
+## Qué incluye
+- Modo historia completo: las 8 rutas (Daigo, Yuki, Mayu, Adolf, Mokomoko, Rankerk, Forelock y Misa), 3 073 mensajes, con tildes, ñ y signos ¿ ¡.
+- Rótulos de lugar, mensaje «Obtienes: …» y los 208 objetos con sus descripciones.
+- ARCHIVOS (antes GAME RECORDS): colección, rankings, tienda, fichas de personaje y cartas.
+- Prólogo, narración del Viejo Girigiri, reparto con los actores de voz y créditos finales.
+- Menús, opciones, tarjeta de memoria, controles, pausa y textos del combate (HAS GANADO, HAS PERDIDO, EMPATE, ¿CONTINUAR?…).
+- Pantallas de versus (Elige jugador, Elige rival, Marcador, escenarios).
+- Textos gráficos redibujados: logotipo del título (y el del fondo de los menús), mapa de la introducción, cartas de ARCHIVOS. Las letras de los menús tienen ahora Á É Í Ó Ú Ñ ¿ ¡.
+
+## Qué necesitas
+- Tu propia copia del juego (no se incluye).
+- Comprueba que tu imagen coincide con esta versión (Redump, 9 pistas):
+
+| Archivo | SHA-1 | CRC32 |
+|---|---|---|
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 1).bin | 5d6e2e360ebf0bcf917153e95a22222842273387 | e3734761 |
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 2).bin | 33d7a52413574b7c0f37c5ab3afd3262140d2de1 | 5fd8db68 |
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 3).bin | 141115b55c528b92090cbb1bfc899fff618dc919 | be96ac8e |
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 4).bin | 70851d13220b020cf8aa84c13cf62f8a91f1cc24 | 55f9d8c2 |
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 5).bin | c744c7c0b6259d033ee43cad471c62d5c3ee5e31 | b198e2d2 |
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 6).bin | 638e738a610e88cc2436c206f671f7dcad412f05 | 389b7e02 |
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 7).bin | d322fb72f30dbef8db99ced506ec9a8abbd90d8d | d0252585 |
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 8).bin | 46e63b29e168666d4f480a9812df2c519f3c1e58 | 3c9f7f86 |
+| Lightning Legend - Daigo no Daibouken (Japan) (Track 9).bin | 0ffc15fd090fbdfc0f69bc8e4d4151f5def61ee4 | 1a036073 |
+
+- Las 9 pistas unidas en un solo .bin (en este orden): SHA-1 `f48a62378107b3b618b1b5124bf4b13f790e4e63`, CRC32 `5132476a`.
+- El aplicador acepta las dos formas (9 pistas o un solo .bin) y siempre genera un único BIN con datos y audio + su CUE.
+- Resultado esperado: «Lightning Legend (ES).bin», SHA-1 `3d5c5749b73346c9dd0f74bd01d979c252db362a`.
+
+## Instalación
+
+### Windows
+1. Descarga y descomprime el último archivo de [Releases](../../releases).
+2. Copia tu `.cue` y tus `.bin` del juego en la carpeta `parche`.
+3. Haz doble clic en **`Aplicar_en_Windows.bat`** (necesita [Python 3](https://www.python.org/downloads/); si no lo tienes y tu copia ya está en un solo `.bin`, usa `xdelta3.exe` como se explica abajo).
+4. Se crearán `Lightning Legend (ES).bin` y `Lightning Legend (ES).cue` en la misma carpeta.
+
+*Alternativa manual:* abre [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher), elige tu BIN original, el archivo `lightninglegend_ES_v1.1.xdelta` y pulsa *Apply patch*. El `.xdelta` espera la imagen **en un solo BIN** (las 9 pistas unidas); si tu copia tiene varias pistas, usa el aplicador. Después usa el `.cue` que genera el aplicador o créalo como se indica en `docs/decisiones_de_traduccion.md`.
+
+### macOS
+1. Descarga y descomprime el último archivo de [Releases](../../releases).
+2. Copia tu `.cue` y tus `.bin` del juego en la carpeta `parche`.
+3. Haz doble clic en **`Aplicar_en_Mac.command`**.
+   - Si macOS lo bloquea: clic derecho → *Abrir* → *Abrir*.
+   - Si no tienes Python 3, el script te indicará cómo instalarlo.
+4. Se crearán `Lightning Legend (ES).bin` y `Lightning Legend (ES).cue`.
+
+*Alternativa en Terminal:*
+
+    python3 aplicar_traduccion.py "/ruta/completa/a/Lightning Legend - Daigo no Daibouken (Japan).cue"
+
+### Linux
+
+    python3 aplicar_traduccion.py "/ruta/completa/a/Lightning Legend - Daigo no Daibouken (Japan).cue"
+
+## Cómo jugar
+Probado en: RetroArch + PCSX ReARMed, con la BIOS japonesa SCPH-5500.
+Carga el archivo `Lightning Legend (ES).cue`. Activa una tarjeta de memoria en el emulador.
+Los diálogos usan la fuente de la BIOS de la consola: se recomienda una BIOS japonesa.
+
+## Decisiones de traducción
+Elementos que se han dejado sin traducir o adaptado a propósito:
+
+| Elemento | Decisión | Motivo |
+|---|---|---|
+| ROUND / FINAL ROUND, GAME OVER | Se mantienen en inglés | Términos habituales de los juegos de lucha |
+| POW | Se mantiene | Nombre de la barra de poder |
+| RANKING | Se mantiene | Término habitual en español en los videojuegos |
+| Nombres de personajes y escenarios (HAKADA, ZEHGO…) | Grafía oficial del juego | Nombres propios |
+| Lugares de Japone (parodias de prefecturas) | Romanizados tal cual | Decisión de estilo |
+| ライトニングレジェンド (logotipo) | LIGHTNING LEGEND | Redibujado con el mismo estilo y colores |
+| 大悟の大冒険 | LA GRAN AVENTURA / DE DAIGO | En dos líneas: en una sola no se leería |
+| じゃぽおね王国之図 | MAPA DEL REINO / DE JAPONE | Mismo estilo del rótulo original |
+| GAME RECORDS | ARCHIVOS | En plural: son muchos |
+| PUSH 1P OR 2P START BUTTON | PULSA EL BOTÓN START | Más sencillo |
+| WINS («DAIGO WINS») | GANA («DAIGO GANA») | Encaja en la frase |
+| Ayuda de ARCHIVOS | Mov. / OK / Atr. | Solo caben 4 letras |
+
+Más detalles: [docs/decisiones_de_traduccion.md](docs/decisiones_de_traduccion.md) · Glosario completo: [docs/glosario_v1.0.csv](docs/glosario_v1.0.csv)
+
+## Problemas conocidos
+- Ninguno conocido en esta versión.
+
+## Cómo reportar un fallo
+Abre un [issue](../../issues/new/choose) con la plantilla **«Reportar fallo»** e incluye:
+1. Versión del parche y emulador/consola (con versión y núcleo).
+2. Dónde ocurre: modo, personaje, pantalla, qué estabas haciendo.
+3. Qué esperabas y qué viste (texto cortado, sin traducir, errata, cuelgue…).
+4. **Captura de pantalla** y, si puedes, **partida guardada / estado de RetroArch** justo antes del fallo (es la forma más rápida de localizarlo).
+5. Si es un cuelgue: ¿ocurre también con el juego original?
+
+Erratas y sugerencias de estilo también son bienvenidas.
+
+## Créditos
+- Traducción, herramientas y pruebas: FuchikomaRed
+- Fuentes usadas: Spleen (BSD-2, letras de los diálogos), Inter (OFL, logotipo), Noto Sans CJK (OFL, subtítulo y mapa).
+- Herramientas de terceros: xdelta3, PCSX ReARMed (pruebas).
+
+## Aviso legal
+Proyecto de aficionados sin ánimo de lucro, no afiliado a Konami ni a KCET. No se distribuye ningún contenido con derechos de autor: solo diferencias binarias. Necesitas tu propia copia legal del juego.
